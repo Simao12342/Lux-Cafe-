@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const CART_PRODUCTS_LABEL = "cart-products";
         const getProducts = async () => {
           try {
-            const response = await fetch("https://raw.githubusercontent.com/Simao12342/unique_products/main/Product.txt");
+            const response = await fetch("https://raw.githubusercontent.com/Simao12342/Lux-Cafe-/main/TEXT/Products.txt");
             if (!response.ok) {
               throw new Error(`HTTP помилка! статус: ${response.status}`);
             }
