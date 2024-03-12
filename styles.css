@@ -4,6 +4,9 @@ body {
     color: white;
     background-color: #333;
 }
+main {
+    background-color: #333;
+}
 /* стилі для хідера і навігаційної панелі */
 header {
     border-bottom: 3px solid #d35400;
@@ -101,19 +104,14 @@ header {
 h5 {
     font-family: "Caveat", cursive;
     color: #d35400;
-    font-size: 7vh !important;
+    font-size: 6vh !important;
+    margin-top: 0;
 }
 
 .carousel-caption p {
     font-family: "Caveat", cursive;
-    font-size: 30px;
+    font-size: 10vh;
     margin-bottom: 0 ;
-
-}
-
-.text-slider {
-    margin-bottom: 5px ;
-    margin-top: 5px ;
 
 }
 
@@ -122,6 +120,10 @@ h5 {
     font-size: 4vh !important;
     color: #d35400 ;
     text-decoration: none !important;
+}
+.carousel-caption a:hover {
+    color: #ffffff;
+    
 }
 
 .carousel-caption {
@@ -133,12 +135,12 @@ h5 {
     background: rgba(0, 0, 0, 0.5);
     /* Напівпрозорий чорний фон для тексту в каруселі */
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px !important;
 }
 
 .carousel-item {
     position: relative;
-    height: 75vh;
+    height: 80vh;
     /* Висота каруселі */
     background-position: bottom;
     background-size: cover;
@@ -157,8 +159,8 @@ h5 {
 }
 .carousel-item p {
     color: #fff;
-    font-size: 25px;
-    line-height: 1.4;
+    font-size: 4vh;
+    line-height: 1;
     /* Відстань між рядками тексту */
 }
 .menu-toggle {
@@ -167,20 +169,21 @@ h5 {
         font-weight: bold;
         color: #d35400;
 }
-@media (max-width: 768px) {
+@media (max-width: 766px) {
 
     /* Стилі для пристроїв з максимальною шириною 768px, наприклад, для планшетів */
     h5 {
-        font-size: 30px !important;
+        font-size: 7vh !important;
         /* Менший розмір шрифту для h5 */
     }
 
     .carousel-caption p {
-        font-size: 20px;
+        font-size: 10vh;
         /* Менший розмір шрифту для абзаців в каруселі */
     }
 
     .carousel-caption {
+        padding: 5px;
         width: 80%;
         /* Більший відсоток ширини для підписів в каруселі */
         left: 10%;
@@ -218,6 +221,12 @@ h5 {
 }
 
 @media (max-width: 480px) {
+    .logo {
+        margin: 0;
+        color: #f2f2f2;
+        font-size: 20px;
+        flex-grow: 1;
+    }
 
     /* Стилі для пристроїв з максимальною шириною 480px, наприклад, для смартфонів */
     h5 {
@@ -242,7 +251,10 @@ h5 {
         left: 5%;
         /* Більше центрування */
     }
-
+    .carousel-item {
+        height: 50vh;
+        /* Менша висота каруселі */
+    }
     .carousel-caption a {
         font-size: 14px;
         /* Ще менший розмір шрифту для посилань */
@@ -252,4 +264,267 @@ h5 {
 
 /* початок стилів мейн частини */
 
+/* навігація меню фільтрації*/
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar-menu li {
+
+    font-size: 25px;
+    float: left;
+}
+
+.navbar-menu li a {
+    font-family: "Caveat", cursive;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-menu li a:hover {
+    color: #d35400;
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+/*  */
+
+/* стилізація блоку товарів */
+.products-all-filters {
+    background-color: #333;
+    font-family: "Caveat", cursive;
+}
+.products-container {
+    padding: 0;
+
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-item {
+  background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18%;
+    height: 300px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 13px;
+  }
+  .product-item:hover {
+
+    border: 1px solid #d35400;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px #d35400;
+        /* Тінь для ефекту підняття */
+    transition: 0.3s;
+  }
+  .product-item h4 {
+    color: #fff;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .product-item > img {
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .product-item > p {
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align:left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    text-align: justify;
+  }
+  h5 {
+    text-align: center;
+  }
+  .product-item-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .product-item-price > span {
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 5vh;
+    color: #d35400;
+  }
+  
+  .product-item-price > button {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: none;
+    outline: none; /* Забезпечує видалення обрамлення під час фокусу */
+    background-color: green;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .product-item-price > button:hover {
+    background-color: #0dc00d;
+  }
+  
+  /* Додатково, для покращення доступності, ви можете стилізувати фокусні стани */
+  .product-item-price > button:focus {
+    outline: 2px solid #0dc00d; /* Наприклад, змініть на більш підходящий стиль обрамлення */
+  }
+  @media screen and (max-width: 600px) {
+    .products-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-item {
+      width: 90%;
+      height: auto;
+      /* Дозволяє контенту визначати висоту */
+    }
+  
+    .product-item>img {
+      width: 60%;
+      /* Або інший відсоток, що краще виглядає на мобільних */
+    }
+  
+    .product-item-price>button,
+    .cart-list-quantity-section>button {
+      padding: 5px;
+      /* Менший падінг для кнопок */
+    }
+  }
+  /* CART styles */
+  
+  /* CART styles */
+  
+  .cart {
+    color: #000000;
+    text-align: center;
+    border-top: 2px solid #777575;
+  }
+  
+  .cart-list-wrapper {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .cart-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .cart-list-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-list-titles > h4 {
+   
+    padding-bottom: 10px;
+    border-bottom: 2px solid #777575;
+  }
+  
+  .cart-list-item-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-list-item-title,
+  .cart-list-quantity-title,
+  .cart-list-img-section,
+  .cart-list-quantity-section {
+    width: 30%;
+  }
+  
+  .cart-list-price-title,
+  .cart-list-price-section {
+    width: 20%;
+  }
+  
+  .cart-list-quantity-section {
+    justify-content: space-between;
+  }
+  
+  .cart-list-quantity-section > button {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .cart-list-img-section > img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+  }
+  
+  .cart-list-img-section > h4 {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+  
+  .cart-list-price-section {
+    font-weight: bold;
+  }
+  .cart-list-price-section {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .cart-list-quantity-section > input {
+    width: 35px;
+    padding: 5px 0;
+    text-indent: 5px;
+  }
+  
+  .cart-list-quantity-section > button:hover {
+    background-color: #bd0404;
+  }
+  
+  .total-amount {
+    text-align: right;
+    font-weight: normal;
+  }
+  
+  .total-amount > span {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+/*  */
 /* кінець мейн частини */
