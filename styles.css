@@ -57,50 +57,6 @@ header {
     text-decoration: none;
     color: #d35400;
 }
-/* Стилі для мобільних пристроїв */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        display: none;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        display: block;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        color: white;
-    }
-
-    .menu-toggle.close {
-        display: none;
-    }
-}
-
-/* Стилі для планшетів та настільних комп'ютерів */
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-}
 /*  кінець стилів для хідера */
 /* початок стилів для каруселі */
 
@@ -171,97 +127,6 @@ h5 {
         font-size: 5vh !important;
         font-weight: bold;
         color: #d35400;
-}
-@media (max-width: 768px) {
-
-    /* Стилі для пристроїв з максимальною шириною 768px, наприклад, для планшетів */
-    h5 {
-        font-size: 7vh !important;
-        /* Менший розмір шрифту для h5 */
-    }
-
-    .carousel-caption p {
-        font-size: 10vh;
-        /* Менший розмір шрифту для абзаців в каруселі */
-    }
-
-    .carousel-caption {
-        padding: 5px;
-        width: 80%;
-        /* Більший відсоток ширини для підписів в каруселі */
-        left: 10%;
-        /* Центрування підпису */
-        top: 30%;
-        /* Зміщення підпису вище */
-        height: auto;
-        /* Автоматична висота */
-    }
-
-    .carousel-item {
-        height: 50vh;
-        /* Менша висота каруселі */
-    }
-
-    .carousel-item img {
-        min-height: 40vh;
-        /* Менша мінімальна висота зображень */
-    }
-
-    h2 {
-        font-size: 40px !important;
-        /* Менший розмір шрифту для заголовків h2 */
-    }
-
-    .carousel-item p {
-        font-size: 18px;
-        /* Менший розмір шрифту для тексту в каруселі */
-    }
-
-    .carousel-caption a {
-        font-size: 16px;
-        /* Менший розмір шрифту для посилань */
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        margin: 0;
-        color: #f2f2f2;
-        font-size: 20px;
-        flex-grow: 1;
-    }
-
-    /* Стилі для пристроїв з максимальною шириною 480px, наприклад, для смартфонів */
-    h5 {
-        font-size: 24px !important;
-        /* Ще менший розмір шрифту для h5 */
-    }
-
-    .carousel-caption p,
-    .carousel-item p {
-        font-size: 16px;
-        /* Ще менший розмір шрифту для тексту */
-    }
-
-    h2 {
-        font-size: 32px !important;
-        /* Ще менший розмір шрифту для заголовків h2 */
-    }
-
-    .carousel-caption {
-        width: 90%;
-        /* Ще більший відсоток ширини для підписів */
-        left: 5%;
-        /* Більше центрування */
-    }
-    .carousel-item {
-        height: 50vh;
-        /* Менша висота каруселі */
-    }
-    .carousel-caption a {
-        font-size: 14px;
-        /* Ще менший розмір шрифту для посилань */
-    }
 }
 /* кінець стилів для каруселі */
 
@@ -343,31 +208,6 @@ h5 {
   cursor: pointer;
   opacity: .5;
   transition: all 0.2s ease;
-}
-@media (max-width: 768px) {
-  .container-filter-button {
-    width: 45%; 
-  }
-
-  .filter-title {
-    font-size: 28px; 
-  }
-}
-
-@media (max-width: 480px) {
-  .filter-section-buttons {
-    flex-direction: column;
-  }
-
-  .container-filter-button {
-    margin: auto;
-    width: 90%; 
-    margin-bottom: 20px;
-  }
-
-  .filter-title {
-    font-size: 24px;
-  }
 }
 /*  */
 
@@ -476,50 +316,6 @@ h5 {
   /* Додатково, для покращення доступності, ви можете стилізувати фокусні стани */
   .product-item-price > button:focus {
     outline: 2px solid #0dc00d; /* Наприклад, змініть на більш підходящий стиль обрамлення */
-  }
-  @media screen and (max-width: 375px) {
-    .products-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .product-item {
-      width: 100%;
-
-      /* Дозволяє контенту визначати висоту */
-    }
-  
-    .product-item > img {
-        height: 60%;
-        width: 100%;
-        padding: 5px;
-        object-fit: cover;
-    }
-  
-    .product-item-price>button,
-    .cart-list-quantity-section>button {
-      padding: 5px;
-      /* Менший падінг для кнопок */
-    }
-  }
-  @media (min-width: 375px) and (max-width: 1023px) {
-    .product-item {
-      width: 48%; /* Зменшуємо ширину, щоб помістити два продукти в ряд */
-      margin: 1%; /* Додаємо невеликий відступ для кращого візуального розмежування */
-    }
-    .product-item > img {
-        height: 40%;
-        width: 100%;
-        padding: 5px;
-        object-fit: cover;
-    }
-  }
-  
-  @media (max-width: 375px) {
-    .product-item {
-      width: 100%; /* На дуже малих екранах (мобільних) робимо товар на всю ширину */
-      margin: 1% 0; /* Відступ зверху і знизу */
-    }
   }
   /* CART styles */
   
@@ -646,3 +442,218 @@ h5 {
   }
 /*  */
 /* кінець мейн частини */
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+  }
+
+  .menu-toggle.close {
+    display: none;
+  }
+}
+
+/* Стилі для планшетів та настільних комп'ютерів */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Стилі для пристроїв з максимальною шириною 768px, наприклад, для планшетів */
+  h5 {
+    font-size: 7vh !important;
+    /* Менший розмір шрифту для h5 */
+  }
+
+  .carousel-caption p {
+    font-size: 10vh;
+    /* Менший розмір шрифту для абзаців в каруселі */
+  }
+
+  .carousel-caption {
+    padding: 5px;
+    width: 80%;
+    /* Більший відсоток ширини для підписів в каруселі */
+    left: 10%;
+    /* Центрування підпису */
+    top: 30%;
+    /* Зміщення підпису вище */
+    height: auto;
+    /* Автоматична висота */
+  }
+
+  .carousel-item {
+    height: 50vh;
+    /* Менша висота каруселі */
+  }
+
+  .carousel-item img {
+    min-height: 40vh;
+    /* Менша мінімальна висота зображень */
+  }
+
+  h2 {
+    font-size: 40px !important;
+    /* Менший розмір шрифту для заголовків h2 */
+  }
+
+  .carousel-item p {
+    font-size: 18px;
+    /* Менший розмір шрифту для тексту в каруселі */
+  }
+
+  .carousel-caption a {
+    font-size: 16px;
+    /* Менший розмір шрифту для посилань */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    margin: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    flex-grow: 1;
+  }
+
+  /* Стилі для пристроїв з максимальною шириною 480px, наприклад, для смартфонів */
+  h5 {
+    font-size: 24px !important;
+    /* Ще менший розмір шрифту для h5 */
+  }
+
+  .carousel-caption p,
+  .carousel-item p {
+    font-size: 16px;
+    /* Ще менший розмір шрифту для тексту */
+  }
+
+  h2 {
+    font-size: 32px !important;
+    /* Ще менший розмір шрифту для заголовків h2 */
+  }
+
+  .carousel-caption {
+    width: 90%;
+    /* Ще більший відсоток ширини для підписів */
+    left: 5%;
+    /* Більше центрування */
+  }
+
+  .carousel-item {
+    height: 50vh;
+    /* Менша висота каруселі */
+  }
+
+  .carousel-caption a {
+    font-size: 14px;
+    /* Ще менший розмір шрифту для посилань */
+  }
+}
+
+@media (max-width: 768px) {
+  .container-filter-button {
+    width: 45%;
+  }
+
+  .filter-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-section-buttons {
+    flex-direction: column;
+  }
+
+  .container-filter-button {
+    margin: auto;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .filter-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-item {
+    width: 100%;
+
+    /* Дозволяє контенту визначати висоту */
+  }
+
+  .product-item>img {
+    height: 60%;
+    width: 100%;
+    padding: 5px;
+    object-fit: cover;
+  }
+
+  .product-item-price>button,
+  .cart-list-quantity-section>button {
+    padding: 5px;
+    /* Менший падінг для кнопок */
+  }
+}
+
+@media (min-width: 375px) and (max-width: 1023px) {
+  .product-item {
+    width: 48%;
+    /* Зменшуємо ширину, щоб помістити два продукти в ряд */
+    margin: 1%;
+    /* Додаємо невеликий відступ для кращого візуального розмежування */
+  }
+
+  .product-item>img {
+    height: 40%;
+    width: 100%;
+    padding: 5px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 375px) {
+  .product-item {
+    width: 100%;
+    /* На дуже малих екранах (мобільних) робимо товар на всю ширину */
+    margin: 1% 0;
+    /* Відступ зверху і знизу */
+  }
+}
