@@ -1,0 +1,733 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Caveat", cursive;
+    color: white;
+    background-color: #333;
+}
+
+main {
+    background-color: #333;
+}
+
+/* стилі для хідера і навігаційної панелі */
+header {
+    border-bottom: 3px solid #d35400;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-left: 50px;
+    color: #f2f2f2;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    font-family: "Caveat", cursive;
+    margin-right: 20px;
+    font-size: 5vh;
+}
+
+.nav-links li:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #d35400;
+}
+
+/*  кінець стилів для хідера */
+
+
+/* CART styles */
+
+.cart {
+    font-family: "Caveat", cursive;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    border-top: 2px solid #777575;
+    margin: 0;
+    padding: 0;
+}
+
+.cart h2 {
+    font-size: 10vh;
+    font-weight: bold;
+    color: #d35400;
+}
+
+.cart-list-wrapper {
+    display: none;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cart-list-titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-list-titles>h4 {
+
+    padding-bottom: 10px;
+    border-bottom: 2px solid #777575;
+}
+
+.cart-list-item-section {
+    display: flex;
+    align-items: center;
+}
+
+.cart-list-item-title,
+.cart-list-quantity-title,
+.cart-list-img-section,
+.cart-list-quantity-section {
+    width: 30%;
+}
+
+.cart-list-price-title,
+.cart-list-price-section {
+    width: 20%;
+}
+
+.cart-list-quantity-section {
+    justify-content: space-between;
+}
+
+.cart-list-quantity-section>button {
+    font-size: 15px;
+    padding: 5px;
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cart-list-img-section>img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.cart-list-img-section>h4 {
+    margin-left: 10px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.cart-list-price-section {
+    font-weight: bold;
+}
+
+.cart-list-price-section {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.cart-list-quantity-section>input {
+    width: 35px;
+    padding: 5px 0;
+    text-indent: 5px;
+}
+
+.cart-list-quantity-section>button:hover {
+    background-color: #bd0404;
+}
+
+.total-amount {
+    text-align: right;
+    font-weight: normal;
+}
+
+.total-amount>span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.cart-empty-title {
+    font-size: 6vh;
+    margin: 0;
+}
+
+/*  */
+/* кінець мейн частини */
+/* Стилі для мобільних пристроїв */
+@media (max-width: 900px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    .menu-toggle.close {
+        display: none;
+    }
+}
+
+/* Стилі для планшетів та настільних комп'ютерів */
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Стилі для пристроїв з максимальною шириною 768px, наприклад, для планшетів */
+    h5 {
+        font-size: 7vh !important;
+        /* Менший розмір шрифту для h5 */
+    }
+
+    .carousel-caption p {
+        font-size: 10vh;
+        /* Менший розмір шрифту для абзаців в каруселі */
+    }
+
+    .carousel-caption {
+        padding: 5px;
+        width: 80%;
+        /* Більший відсоток ширини для підписів в каруселі */
+        left: 10%;
+        /* Центрування підпису */
+        top: 30%;
+        /* Зміщення підпису вище */
+        height: auto;
+        /* Автоматична висота */
+    }
+
+    .carousel-item {
+        height: 50vh;
+        /* Менша висота каруселі */
+    }
+
+    .carousel-item img {
+        min-height: 40vh;
+        /* Менша мінімальна висота зображень */
+    }
+
+    h2 {
+        font-size: 40px !important;
+        /* Менший розмір шрифту для заголовків h2 */
+    }
+
+    .carousel-item p {
+        font-size: 18px;
+        /* Менший розмір шрифту для тексту в каруселі */
+    }
+
+    .carousel-caption a {
+        font-size: 16px;
+        /* Менший розмір шрифту для посилань */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        margin: 0;
+        color: #f2f2f2;
+        font-size: 20px;
+        flex-grow: 1;
+    }
+
+    /* Стилі для пристроїв з максимальною шириною 480px, наприклад, для смартфонів */
+    h5 {
+        font-size: 24px !important;
+        /* Ще менший розмір шрифту для h5 */
+    }
+
+    .carousel-caption p,
+    .carousel-item p {
+        font-size: 16px;
+        /* Ще менший розмір шрифту для тексту */
+    }
+
+    h2 {
+        font-size: 32px !important;
+        /* Ще менший розмір шрифту для заголовків h2 */
+    }
+
+    .carousel-caption {
+        width: 90%;
+        /* Ще більший відсоток ширини для підписів */
+        left: 5%;
+        /* Більше центрування */
+    }
+
+    .carousel-item {
+        height: 50vh;
+        /* Менша висота каруселі */
+    }
+
+    .carousel-caption a {
+        font-size: 14px;
+        /* Ще менший розмір шрифту для посилань */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-filter-button {
+        width: 30%;
+    }
+
+    .filter-title {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {}
+
+@media screen and (max-width: 375px) {
+
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 100%;
+
+        /* Дозволяє контенту визначати висоту */
+    }
+
+    .product-item>img {
+        height: 60%;
+        width: 100%;
+        padding: 5px;
+        object-fit: cover;
+    }
+
+    .product-item-price>button,
+    .cart-list-quantity-section>button {
+        padding: 5px;
+        /* Менший падінг для кнопок */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-item {
+        height: 55vh;
+        width: 23%;
+        margin: 1%;
+    }
+
+    .product-item>img {
+        height: 25vh;
+        width: 100%;
+        padding: 5px;
+        object-fit: cover;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 3vh !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .container-filter-button {
+        border: none !important;
+        margin-bottom: 10px;
+        position: relative;
+        width: 12%;
+        height: 17vh !important;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 4vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .filter-button:hover {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: #943c01;
+        cursor: pointer;
+    }
+
+    .container-filter-button {
+        border: none !important;
+        margin-bottom: 10px;
+        position: relative;
+        width: 12%;
+        height: 25vh;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 520px) and (max-width: 767px) {
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-item {
+        height: 70vh;
+        width: 48%;
+        margin: 1%;
+    }
+
+    .product-item>h4 {
+        font-size: 3vh;
+    }
+
+    .product-item>p {
+        font-size: 2vh;
+    }
+
+    .product-item>img {
+        height: 60%;
+        width: 100%;
+        padding: 5px;
+        object-fit: cover;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 2vh !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .container-filter-button {
+        border: none !important;
+        margin-bottom: 10px;
+        position: relative;
+        width: 30%;
+        height: 22vh !important;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 4vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .filter-button:hover {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: #943c01;
+        cursor: pointer;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+}
+
+@media (min-width: 200px) and (max-width: 520px) {
+
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-item {
+        height: 70vh;
+        width: 90%;
+        margin: 1%;
+    }
+
+    .product-item>h4 {
+        font-size: 3vh;
+    }
+
+    .product-item>p {
+        font-size: 2vh;
+    }
+
+    .product-item>img {
+        height: 60%;
+        width: 100%;
+        padding: 5px;
+        object-fit: cover;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 2vh !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .container-filter-button {
+        border: none !important;
+        margin-bottom: 10px;
+        position: relative;
+        width: 30%;
+        height: 22vh !important;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .filter-section-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .filter-button {
+        width: 100%;
+        font-family: "Caveat", cursive;
+        font-size: 4vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #d35400;
+        color: white;
+        padding: 2px 3px;
+        border: none;
+        cursor: pointer;
+        margin: 0px;
+        text-decoration: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .filter-button:hover {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: #943c01;
+        cursor: pointer;
+    }
+
+    .container-filter-button img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+}
+
+
+
+@media (max-width: 375px) {
+    .product-item {
+        width: 100%;
+        /* На дуже малих екранах (мобільних) робимо товар на всю ширину */
+        margin: 1% 0;
+        /* Відступ зверху і знизу */
+    }
+}

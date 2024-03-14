@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // setting values for elements
             productWrapper.classList.add("product-item");
             productWrapper.setAttribute('data-category', item.category); /**додавання кожному елементу атрибуту із значень "category" */
+            productWrapper.setAttribute('data-product-id', item.id);
+            productWrapper.setAttribute('data-product-title', item.title);
+            productWrapper.setAttribute('onclick', "goToProductPage(this)");
             productPriceSection.classList.add("product-item-price");
             productImg.src = item.image;
             productTitle.innerText = item.title;
@@ -213,7 +216,10 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         
         renderProducts();
-        document.getElementsById('filterAll').addEventListener('click', function() {
-          this.style.border = 'none'; // Видаляємо рамку
-          this.style.outline = 'none'; // Видаляємо контур, який може з'явитися після кліку
-        });
+
+function goToProductPage(element) {
+    var productTitle = element.getAttribute('data-product-title');
+    // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
+    var titleForUrl = encodeURIComponent(productTitle);
+    window.location.href = 'product.html?title=' + titleForUrl;
+}

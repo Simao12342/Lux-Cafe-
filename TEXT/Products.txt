@@ -172,6 +172,14 @@
     "description": "Курка, бекон, чері, соус бешамель, салат асберг, пармезан, соус цезар", 
     "price": 210,
     "image": "IMG/Pizza/cesare.png"
+  },
+{
+    "id": 23, 
+    "category":"Pizza", 
+    "title": "Піца ЖОПА", 
+    "description": "Какашки бабіна, пердушня і сцяки", 
+    "price": 10,
+    "image": "IMG/Pizza/cesare.png"
   }
 
 ]
