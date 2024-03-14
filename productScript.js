@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadProductDetails(productTitle) {
     // Запит до сервера за деталями товарів
-    fetch('TEXT/Products.txt')
+    fetch('https://raw.githubusercontent.com/Simao12342/Lux-Cafe-/main/TEXT/Products.txt')
         .then(response => response.json())
         .then(data => {
             // Знаходимо продукт з відповідною назвою
