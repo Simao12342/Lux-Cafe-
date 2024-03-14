@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Caveat", cursive;
+    color: white;
+    background-color: #333;
+}
+
+main {
+    background-color: #333;
+}
+
+/* стилі для хідера і навігаційної панелі */
+header {
+    border-bottom: 3px solid #d35400;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    margin-left: 50px;
+    color: #f2f2f2;
+    font-size: 20px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    font-family: "Caveat", cursive;
+    margin-right: 20px;
+    font-size: 5vh;
+}
+
+.nav-links li:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    color: #d35400;
+}
+
+/*  кінець стилів для хідера */
