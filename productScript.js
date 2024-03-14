@@ -53,6 +53,12 @@ function displayRelatedProducts(products, relatedCategory) {
             <p>${product.description}</p>
             <p>${product.price}₴</p>
         `;
+        // Додаємо обробник подій для відкриття детальної сторінки товару
+        productElement.addEventListener('click', () => {
+            // Змінюємо URL, додаючи назву товару як параметр запиту
+            // Припускаємо, що ви вже маєте реалізовану логіку на стороні сервера або використовуєте фронтенд-маршрутизацію
+            window.location.href = `?title=${encodeURIComponent(product.title)}`;
+        });
         container.appendChild(productElement);
     });
 }
