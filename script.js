@@ -48,13 +48,20 @@ document.addEventListener('DOMContentLoaded', function () {
             productWrapper.setAttribute('data-product-id', item.id);
             productWrapper.setAttribute('data-product-title', item.title);
             productWrapper.setAttribute('onclick', "goToProductPage(this)");
+            productBuyBtn.classList.add('data-product-buyBtn');
             productPriceSection.classList.add("product-item-price");
             productImg.src = item.image;
             productTitle.innerText = item.title;
             productDescription.innerText = item.description;
             productPrice.innerText = `${item.price}$`;
             productBuyBtn.innerText = "В кошик";
-            productBuyBtn.addEventListener("click", () => addToCart(item));
+            productBuyBtn.addEventListener('click', function(event) {
+        // Запобігаємо виклику обробника події кліку, назначеного на div
+             event.stopPropagation();
+        // Код, що виконується при кліку на кнопку
+              addToCart(item);
+    });
+            // productBuyBtn.addEventListener("click", () => addToCart(item));
             // appending elements inside the wrappers
             productPriceSection.append(productPrice, productBuyBtn);
             productWrapper.append(
