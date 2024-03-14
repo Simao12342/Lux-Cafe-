@@ -58,9 +58,9 @@ function displayRelatedProducts(products, relatedCategory) {
         container.appendChild(productElement);
     });
 }
-function goToProductPage(element) {
-    var productTitle = element.getAttribute('data-product-title');
-    // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
-    var titleForUrl = encodeURIComponent(productTitle);
-    window.location.href = 'product.html?title=' + titleForUrl;
+// function goToProductPage(element) {
+//     var productTitle = element.getAttribute('data-product-title');
+//     // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
+//     var titleForUrl = encodeURIComponent(productTitle);
+//     window.location.href = 'product.html?title=' + titleForUrl;
 }
