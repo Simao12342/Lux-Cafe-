@@ -221,12 +221,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const setCurrentCartItems = (products) => {
           localStorage.setItem(CART_PRODUCTS_LABEL, JSON.stringify(products));
         };
+
+        renderProducts();
+
         function goToProductPage(element) {
     var productTitle = element.getAttribute('data-product-title');
     // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
     var titleForUrl = encodeURIComponent(productTitle);
     window.location.href = 'product.html?title=' + titleForUrl;
 }
-        renderProducts();
-
-

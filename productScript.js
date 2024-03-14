@@ -38,27 +38,27 @@ function updateProductDetails(product) {
     `;
 }
 
-function displayRelatedProducts(products, relatedCategory) {
-    const container = document.getElementById('relatedProductsContainer');
-    container.innerHTML = '<h2>Супутні товари</h2>';
+// function displayRelatedProducts(products, relatedCategory) {
+//     const container = document.getElementById('relatedProductsContainer');
+//     container.innerHTML = '<h2>Супутні товари</h2>';
 
-    // Відфільтровуємо товари за заданою категорією
-    const filteredProducts = products.filter(product => product.category === "Drinks");
+//     // Відфільтровуємо товари за заданою категорією
+//     const filteredProducts = products.filter(product => product.category === "Drinks");
 
-    filteredProducts.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.innerHTML = `
-            <img src="${product.image}" alt="${product.title}" style="width: 100px; height: auto;">
-            <h3>${product.title}</h3>
-            <p>${product.description}</p>
-            <p>${product.price}₴</p>
-        `;
-        // Додаємо обробник подій для відкриття детальної сторінки товару
-        productElement.addEventListener('click', () => {
-            // Змінюємо URL, додаючи назву товару як параметр запиту
-            // Припускаємо, що ви вже маєте реалізовану логіку на стороні сервера або використовуєте фронтенд-маршрутизацію
-            window.location.href = `?title=${encodeURIComponent(product.title)}`;
-        });
-        container.appendChild(productElement);
-    });
-}
+//     filteredProducts.forEach(product => {
+//         const productElement = document.createElement('div');
+//         productElement.innerHTML = `
+//             <img src="${product.image}" alt="${product.title}" style="width: 100px; height: auto;">
+//             <h3>${product.title}</h3>
+//             <p>${product.description}</p>
+//             <p>${product.price}₴</p>
+//         `;
+//         // Додаємо обробник подій для відкриття детальної сторінки товару
+//         productElement.addEventListener('click', () => {
+//             // Змінюємо URL, додаючи назву товару як параметр запиту
+//             // Припускаємо, що ви вже маєте реалізовану логіку на стороні сервера або використовуєте фронтенд-маршрутизацію
+//             window.location.href = `?title=${encodeURIComponent(product.title)}`;
+//         });
+//         container.appendChild(productElement);
+//     });
+// }
