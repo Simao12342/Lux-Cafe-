@@ -47,9 +47,7 @@ function displayRelatedProducts(products, relatedCategory) {
 
     filteredProducts.forEach(product => {
         const productElement = document.createElement('div');
-            productElement.setAttribute('data-product-title', product.title);
-            productElement.setAttribute('onclick', "goToProductPage(this)");
-            productElement.innerHTML = `
+        productElement.innerHTML = `
             <img src="${product.image}" alt="${product.title}" style="width: 100px; height: auto;">
             <h3>${product.title}</h3>
             <p>${product.description}</p>
@@ -57,10 +55,4 @@ function displayRelatedProducts(products, relatedCategory) {
         `;
         container.appendChild(productElement);
     });
-}
-// function goToProductPage(element) {
-//     var productTitle = element.getAttribute('data-product-title');
-//     // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
-//     var titleForUrl = encodeURIComponent(productTitle);
-//     window.location.href = 'product.html?title=' + titleForUrl;
 }
