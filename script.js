@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
             productWrapper.setAttribute('data-category', item.category); /**додавання кожному елементу атрибуту із значень "category" */
             productWrapper.setAttribute('data-product-id', item.id);
             productWrapper.setAttribute('data-product-title', item.title);
-            productWrapper.setAttribute('onclick', "goToProductPage(this)");
             productBuyBtn.classList.add('data-product-buyBtn');
             productPriceSection.classList.add("product-item-price");
             productImg.src = item.image;
@@ -71,6 +70,11 @@ document.addEventListener('DOMContentLoaded', function () {
               productPriceSection
             );
             container.append(productWrapper);
+            productWrapper.addEventListener('click', function() {
+    const productId = this.getAttribute('data-product-id');
+    // Перенаправлення на сторінку з деталями товару, додаючи ідентифікатор продукту як query parameter
+    window.location.href = `product-detail.html?product_id=${productId}`;
+});
           }
           renderInitialCart();
         };
