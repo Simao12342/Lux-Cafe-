@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const currentAmount = parseFloat(price.innerText) * quantity.value;
             total += currentAmount;
           }
-          totalAmount.innerText = `${total.toFixed(2)}₴`;
+          totalAmount.innerText = `${total.toFixed(2)}$`;
           localStorage.setItem("total", total.toFixed(2));
           saveProduct(product);
         };
@@ -221,12 +221,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const setCurrentCartItems = (products) => {
           localStorage.setItem(CART_PRODUCTS_LABEL, JSON.stringify(products));
         };
-        
-        renderProducts();
-
-function goToProductPage(element) {
+        function goToProductPage(element) {
     var productTitle = element.getAttribute('data-product-title');
     // Замінюємо пробіли на підкреслення або використовуємо інший механізм для створення URL-friendly назви
     var titleForUrl = encodeURIComponent(productTitle);
     window.location.href = 'product.html?title=' + titleForUrl;
 }
+        renderProducts();
+
+
