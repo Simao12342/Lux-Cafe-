@@ -175,7 +175,7 @@
   },
 {
     "id": 23, 
-    "category":"Pizza", 
+    "category":"Drinks", 
     "title": "Піца ЖОПА", 
     "description": "Какашки бабіна, пердушня і сцяки", 
     "price": 10,

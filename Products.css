@@ -65,6 +65,59 @@ header {
 
 /*  кінець стилів для хідера */
 
+.productDetails {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Caveat", cursive;
+    color: white;
+    background-color: #333;
+}
+.product-info-title {
+    padding: 25px;
+    font-size: 12vh;
+    /* font-weight: bold; */
+    text-align: center;
+}
+.product-info-page {
+    display: flex;
+    justify-content: center;
+
+    padding: 25px;
+}
+.page-info-price {
+    padding-left: 8vw;
+    font-size: 10vh;
+    color: #d35400;
+}
+.page-description {
+    padding-left: 3vw;
+    font-size: 5vh;
+
+}
+.page-info-description {
+    padding-left: 2vw;
+    font-size: 4vh;
+}
+.product-info-page img{
+    width: 30vw;
+    height: 25vh;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* CART styles */
 

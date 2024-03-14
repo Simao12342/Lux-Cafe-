@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             productImg.src = item.image;
             productTitle.innerText = item.title;
             productDescription.innerText = item.description;
-            productPrice.innerText = `${item.price}$`;
+            productPrice.innerText = `${item.price}₴`;
             productBuyBtn.innerText = "В кошик";
             productBuyBtn.addEventListener('click', function(event) {
         // Запобігаємо виклику обробника події кліку, назначеного на div
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const currentAmount = parseFloat(price.innerText) * quantity.value;
             total += currentAmount;
           }
-          totalAmount.innerText = `${total.toFixed(2)}$`;
+          totalAmount.innerText = `${total.toFixed(2)}₴`;
           localStorage.setItem("total", total.toFixed(2));
           saveProduct(product);
         };
