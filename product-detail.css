@@ -96,12 +96,11 @@ header {
 .details-info-text span {
     font-size: 4vh;
 }
-/* .relatedProductContainer {
+.relatedProductContainer {
     display: flex;
     padding-left: 5px;
     overflow-x: auto;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 10px;
     background-color: #333;
     color: #fff;
@@ -125,21 +124,27 @@ header {
 }
 .relatedProduct img{
     border-radius: 10px;
-} */
+}
 .scroll-container {
     display: flex;
+    background-color: #333;
+    color: #fff;
     align-items: center;
   }
   
   .relatedProductContainer {
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     width: 100%; /* Або інша ширина в залежності від вашого дизайну */
   }
   
   .scroll-button {
     cursor: pointer;
+    font-size: 20px;
+    background-color: #d35400;
+    text-align: center;
+    outline: 2px solid #f16202;
     /* Стилізуйте кнопки, як вам подобається */
   }
   

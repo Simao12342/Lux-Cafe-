@@ -76,11 +76,11 @@
     const scrollRightButton = document.querySelector('.scroll-button.right');
   
     scrollLeftButton.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+      scrollContainer.scrollBy({ left: -400, behavior: 'smooth' });
     });
   
     scrollRightButton.addEventListener('click', () => {
-      scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+      scrollContainer.scrollBy({ left: 400, behavior: 'smooth' });
     });
   });
   
