@@ -1,18 +1,15 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+    background-color: #333;
+}
 body {
     margin: 0;
     font-family: "Caveat", cursive;
     color: white;
     background-color: #333;
 }
-
-main {
-    background-color: #333;
-}
-
 /* стилі для хідера і навігаційної панелі */
 header {
     border-bottom: 3px solid #d35400;
@@ -64,3 +61,38 @@ header {
 }
 
 /*  кінець стилів для хідера */
+#product-detail-container {
+    background-color: #333;
+    font-family: "Caveat", cursive;
+    color: white;
+}
+.product-detail-container h2 {
+    text-align: center;
+    font-size: 15vh;
+}
+.details-info-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+.product-image-container {
+    width: 30%;
+    height: 100%;
+}
+.details-info-container img {
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+.details-info-text p{
+    font-size: 8vh;
+}
+h3 {
+    font-size: 6vh;
+    color: #d35400;
+}
+.details-info-text span {
+    font-size: 4vh;
+}

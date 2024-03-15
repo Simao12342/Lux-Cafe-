@@ -37,10 +37,13 @@
         container.innerHTML = `
                 <h2>${product.title}</h2>
                 <div class="details-info-container">
-                <img src="${product.image}" alt="${product.title}" style="max-width: 100%; height: auto;">
+                <div class="product-image-container">
+                <img src="${product.image}" alt="${product.title}"></div>
                 <div class="details-info-text">
+                <p>Ціна: ${product.price}₴</p>
+                <h3>Детальна інформація:</h3>
                 <span>${product.description}</span>
-                <p>Ціна: ${product.price}₴</p></div></div>
+                </div></div>
                 <!-- Додати інші деталі продукту за потреби -->
             `;
       };
