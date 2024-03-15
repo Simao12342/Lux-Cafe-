@@ -89,10 +89,67 @@ header {
 .details-info-text p{
     font-size: 8vh;
 }
-h3 {
+.detailInfo {
     font-size: 6vh;
     color: #d35400;
 }
 .details-info-text span {
     font-size: 4vh;
 }
+/* .relatedProductContainer {
+    display: flex;
+    padding-left: 5px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #333;
+    color: #fff;
+    font-family: "Caveat", cursive;
+}
+.relatedH3 {
+    background-color: #333;
+    color: #d35400;
+    font-family: "Caveat", cursive;
+    text-align: center;
+    font-size: 8vh;
+    padding: 0;
+    margin: 0;
+}
+.relatedProduct {
+    text-align: center;
+}
+.relatedProduct p{
+    font-size: 3vh;
+    font-weight: bold;
+}
+.relatedProduct img{
+    border-radius: 10px;
+} */
+.scroll-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .relatedProductContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%; /* Або інша ширина в залежності від вашого дизайну */
+  }
+  
+  .scroll-button {
+    cursor: pointer;
+    /* Стилізуйте кнопки, як вам подобається */
+  }
+  
+  /* Приховуємо скролбар */
+  .relatedProductContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .relatedProductContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  

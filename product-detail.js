@@ -42,7 +42,7 @@
         </div>
         <div class="details-info-text">
           <p>Ціна: ${product.price}₴</p>
-          <h3>Детальна інформація:</h3>
+          <h3 class="detailInfo">Детальна інформація:</h3>
           <span>${product.description}</span>
         </div>
       </div>
@@ -50,19 +50,37 @@
   };
 
   const renderRelatedProducts = (currentCategory, products, currentProductId) => {
-    const relatedProductsContainer = document.createElement('div');
-    relatedProductsContainer.innerHTML = '<h3>Супутні товари:</h3>';
-    document.body.appendChild(relatedProductsContainer);
-
+    const relatedProductsContainer = document.querySelector('.relatedProductContainer');
+   
+    
     products.filter(product => product.category !== currentCategory && product.id !== currentProductId).forEach(product => {
       const productElement = document.createElement('div');
+      productElement.classList.add('relatedProduct');
       productElement.innerHTML = `
         <h4>${product.title}</h4>
-        <img src="${product.image}" alt="${product.title}" style="width: 100px; height: auto;">
+        <img src="${product.image}" alt="${product.title}" style="width: 200px; height: auto;">
         <p>Ціна: ${product.price}₴</p>
-        <p>${product.description}</p>
+        
       `;
+      // <p>${product.description}</p>
       relatedProductsContainer.appendChild(productElement);
+      productElement.style.cursor = 'pointer';
+      productElement.addEventListener('click', () => {
+      window.location.href = `product-detail.html?product_id=${product.id}`; // Перенаправлення користувача на сторінку деталей продукту
+    });
     });
   };
-
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.querySelector('.relatedProductContainer');
+    const scrollLeftButton = document.querySelector('.scroll-button.left');
+    const scrollRightButton = document.querySelector('.scroll-button.right');
+  
+    scrollLeftButton.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+    });
+  
+    scrollRightButton.addEventListener('click', () => {
+      scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  });
+  
